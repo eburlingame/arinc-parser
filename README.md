@@ -1,36 +1,15 @@
-# airinc424
+# Airinc 424 Parser
 
-FIXME: description
+This parses the Airinc 424 (version 15) format for aeronautical instrument data. It will output the results in JSON with descriptive labels.
 
 ## Installation
 
-Download from http://example.com/FIXME.
+Ensure you have [Leiningen](https://leiningen.org/) installed.
 
-## Usage
+## Running tests
 
-FIXME: explanation
-
-    $ java -jar airinc424-0.1.0-standalone.jar [args]
-
-## Options
-
-FIXME: listing of options this app accepts.
+    $ lein test
 
 ## Examples
 
-...
-
-### Bugs
-
-...
-
-### Any Other Sections
-### That You Think
-### Might be Useful
-
-## License
-
-Copyright © 2018 FIXME
-
-Distributed under the Eclipse Public License either version 1.0 or (at
-your option) any later version.
+Coming soon!
