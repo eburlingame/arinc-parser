@@ -1,6 +1,6 @@
-(ns airinc424.records
-  (:require [airinc424.section :refer :all]
-            [airinc424.field-defs :refer :all]))
+(ns arinc424.records
+  (:require [arinc424.section :refer :all]
+            [arinc424.field-defs :refer :all]))
 
 (def record-layouts
   {

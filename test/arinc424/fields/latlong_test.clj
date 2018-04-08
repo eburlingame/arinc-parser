@@ -1,6 +1,6 @@
-(ns airinc424.fields.latlong-test
-  (:require [airinc424.fields.latlong :refer :all]
-            [airinc424.helpers :refer :all]
+(ns arinc424.fields.latlong-test
+  (:require [arinc424.fields.latlong :refer :all]
+            [arinc424.helpers :refer :all]
             [clojure.test :refer :all]))
 
 ; --- Tests ---

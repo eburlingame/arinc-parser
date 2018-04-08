@@ -1,4 +1,4 @@
-(ns airinc424.section)
+(ns arinc424.section)
 
 (def section-code
   {

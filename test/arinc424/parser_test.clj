@@ -1,9 +1,9 @@
-(ns airinc424.parser-test
-  (:require [airinc424.parser :refer :all]
-            [airinc424.records :refer :all]
-            [airinc424.helpers :refer :all]
-            [airinc424.section :refer :all]
-            [airinc424.field-defs :refer :all]
+(ns arinc424.parser-test
+  (:require [arinc424.parser :refer :all]
+            [arinc424.records :refer :all]
+            [arinc424.helpers :refer :all]
+            [arinc424.section :refer :all]
+            [arinc424.field-defs :refer :all]
             [clojure.core.match :refer [match]]
             [clojure.test :refer :all]
             [clojure.string :refer [join split-lines trim]]))

@@ -1,4 +1,4 @@
-(ns airinc424.helpers
+(ns arinc424.helpers
   (:require [clojure.string :refer [replace trim lower-case]]
             [clojure.core.match :refer [match]]
             [clojure.test :refer :all]))

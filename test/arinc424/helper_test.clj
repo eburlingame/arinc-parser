@@ -1,8 +1,8 @@
-(ns airinc424.helper-test
+(ns arinc424.helper-test
   (:require [clojure.string :refer [replace trim lower-case]]
             [clojure.core.match :refer [match]]
             [clojure.test :refer :all]
-            [airinc424.helpers :refer :all]))
+            [arinc424.helpers :refer :all]))
 
 ; --- Tests ---
 (deftest test-zero-through-z-value

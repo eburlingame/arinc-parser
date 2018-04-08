@@ -1,4 +1,4 @@
-(ns airinc424.core
+(ns arinc424.core-test
   (:gen-class))
 
 (defn -main

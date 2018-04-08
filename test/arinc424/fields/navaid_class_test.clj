@@ -1,5 +1,5 @@
-(ns airinc424.fields.navaid-class-test
-  (:require [airinc424.fields.navaid-class :refer :all]
+(ns arinc424.fields.navaid-class-test
+  (:require [arinc424.fields.navaid-class :refer :all]
             [clojure.core.match :refer [match]]
             [clojure.test :refer :all]))
 

@@ -1,5 +1,5 @@
-(ns airinc424.fields.latlong
-  (:require [airinc424.helpers :refer :all]
+(ns arinc424.fields.latlong
+  (:require [arinc424.helpers :refer :all]
             [clojure.core.match :refer [match]]
             [clojure.test :refer :all]))
 

@@ -1,5 +1,5 @@
-(ns airinc424.fields.route-type
-  (:require [airinc424.helpers :refer :all]))
+(ns arinc424.fields.route-type
+  (:require [arinc424.helpers :refer :all]))
 
 (def enroute-airway-route-type-values
   {

@@ -1,8 +1,8 @@
-(ns airinc424.field-defs
-  (:require [airinc424.fields.route-type :refer :all]
-            [airinc424.fields.latlong :refer :all]
-            [airinc424.fields.navaid-class :refer :all]
-            [airinc424.helpers :refer :all]))
+(ns arinc424.field-defs
+  (:require [arinc424.fields.route-type :refer :all]
+            [arinc424.fields.latlong :refer :all]
+            [arinc424.fields.navaid-class :refer :all]
+            [arinc424.helpers :refer :all]))
 
 ; Types http://dev.x-plane.com/update/data/424-15s.pdf (Ch. 5, pg. 66)
 
