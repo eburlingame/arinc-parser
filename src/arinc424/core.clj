@@ -1,20 +1,27 @@
 (ns arinc424.core
   (:gen-class)
-  (:require [arinc424.parser :refer [parse-cifp]]))
+  (:require [arinc424.parser :refer [parse-cifp]]
+            [arinc424.serializer :refer [records-to-folders!]]))
 
-
-(def cifp (slurp "data/FAACIFP15"))
-
-
-(defn get-records []
+(defn get-records [cifp]
   (parse-cifp cifp))
 
-(def vors (filter #(= [:navaid :vhf-navaid 0] (first %)) (get-records)))
+(defn get-record-with-path [records path]
+  (keep #(if (= path (-> % keys first))
+           (% path)
+           nil)
+        records))
 
-(def group-by #())
+(defn check-args [args]
+  (= (count args) 2))
+
+(defn get-vors [records]
+  (get-record-with-path records [:navaid :vhf-navaid 0]))
 
 (defn -main
-  "I don't do a whole lot ... yet."
   [& args]
-  (println "Hello, World!"))
+  (if (check-args args)
+    (-> args first slurp get-records get-vors (records-to-folders! (second args) "vors.json"))
+    (println "Usage: airinc424 <cfip file> <output folder>")))
 
+(-main "data/FAACIFP15" "output")

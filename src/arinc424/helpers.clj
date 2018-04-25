@@ -52,3 +52,15 @@
   (let [tolerance 0.00000001]
     (and (< exp (+ act tolerance))
          (> exp (- act tolerance)))))
+
+(defn file-exists [f]
+  (.exists (clojure.java.io/as-file f)))
+
+(defn put-file [f c]
+  (let [file-name f]
+    (clojure.java.io/make-parents f)
+    (spit f c)))
+
+(defn trun
+  ([v] (quot v 1))
+  ([v g] (* g (quot (/ v g) 1))))
