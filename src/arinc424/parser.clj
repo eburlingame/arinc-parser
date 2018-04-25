@@ -106,24 +106,24 @@
 (defn parse-cifp [cifp]
   (filter #(not (nil? %)) (map parse-row (split-lines cifp))))
 
-(def cifp (slurp "data/FAACIFP15"))
-
 ; --- Tools ---
 
-(defn describe-field [path field-name field]
-  "Prints the name and length of a record layout for verification"
-  {:name field-name
-   :pat  (re-pattern (field-regex path field))
-   :len  (field-len path field)})
-
-(defn describe-record [path record]
-  "Describes each of the records for verification"
-  (map #(describe-field path % (get-field-spec %)) record))
-
-(defn find-bad-pattern [path fields]
-  "Returns the last field that matches at least one row in the cifp data"
-  (if (= 0 (count (re-seq (build-record-matcher path fields) cifp)))
-    (if (= 0 (count fields))
-      "They're all bad"
-      (find-bad-pattern path (subvec fields 0 (- (count fields) 2))))
-    (str "Last good expr: " (last fields))))
+;(def cifp (slurp "data/FAACIFP15"))
+;
+;(defn describe-field [path field-name field]
+;  "Prints the name and length of a record layout for verification"
+;  {:name field-name
+;   :pat  (re-pattern (field-regex path field))
+;   :len  (field-len path field)})
+;
+;(defn describe-record [path record]
+;  "Describes each of the records for verification"
+;  (map #(describe-field path % (get-field-spec %)) record))
+;
+;(defn find-bad-pattern [path fields]
+;  "Returns the last field that matches at least one row in the cifp data"
+;  (if (= 0 (count (re-seq (build-record-matcher path fields) cifp)))
+;    (if (= 0 (count fields))
+;      "They're all bad"
+;      (find-bad-pattern path (subvec fields 0 (- (count fields) 2))))
+;    (str "Last good expr: " (last fields))))
